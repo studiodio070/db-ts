@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Gallery() {
+function Blog() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Gallery() {
   )
 }
 
-export default Gallery
+export default Blog
