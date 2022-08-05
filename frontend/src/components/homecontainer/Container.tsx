@@ -1,16 +1,21 @@
 import React from 'react'
+import bgCard from '../../assets/webside/_DSC7952aj.jpg'
 import Title from './Title'
 
 function Container() {
   return (
-    <div>
-      <Title title='About' description='About me' />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Pellentesque euismod, nisi eu consectetur consectetur,
-        nisl nisi consectetur nisl, eu consectetur nisl nisi euismod,
-        consectetur nisl nisi eu consectetur nisl.
-      </p>
+    <div className='card w-96 h-auto glass'>
+      <figure>
+        <img src={bgCard} alt="davidwerk" />
+      </figure>
+      <div className="card-body">
+
+        <Title
+          title='David Bade'
+          description='Beeldend Kunstenaar' />
+      </div>
+
+
 
     </div>
   )

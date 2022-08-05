@@ -1,47 +1,36 @@
 import { useState } from 'react'
-import Navbar from './components/navbar/Navbar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Gallery from './pages/Gallery'
-import Exhibitions from './pages/Exhibitions'
-import CV from './pages/CV'
-import Blog from './pages/Blog'
-import './index.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Navbar from './components/navbar/Navbar'
+import './index.css'
+import About from './pages/About'
+import Blog from './pages/Blog'
+import CV from './pages/CV'
+import Exhibitions from './pages/Exhibitions'
+import Gallery from './pages/Gallery'
+import Home from './pages/Home'
 
-function App() {
+function App(): JSX.Element {
 
   return (
     <div className="App">
-      <Navbar />
-      <Router>
-        <Switch>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/gallery">
-            <Gallery />
-          </Route>
-          <Route path="/exhibitions">
-            <Exhibitions />
-          </Route>
-          <Route path="/cv">
-            <CV />
-          </Route>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
 
-        </Switch>
-      </Router>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="exhibitions" element={<Exhibitions />} />
+          <Route path="cv" element={<CV />} />
+        </Routes>
+
+      </BrowserRouter>
 
 
-    </div>
+
+    </div >
   )
 }
 
