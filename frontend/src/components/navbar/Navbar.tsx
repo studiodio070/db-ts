@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-function Navbar() {
-  return (
-    <div>Navbar</div>
-=======
 
 //@ts-nocheck
 
@@ -53,7 +48,6 @@ function Navbar() {
       </div>
 
     </div >
->>>>>>> Stashed changes
   )
 }
 export default Navbar
